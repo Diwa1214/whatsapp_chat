@@ -115,7 +115,7 @@ app.post("/webhook", async (req, res) => {
         let eventCreated = await auth.authorize().then(event.createEvent).catch(console.error);
         if(eventCreated){
             await axios({
-              method: "POST", // Required, HTTP method, a string, e.g. POST, GET
+              method: "POST",
               url:url,
               data: {
                 messaging_product: "whatsapp",
